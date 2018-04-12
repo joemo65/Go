@@ -3,15 +3,28 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Printf("hello, world this is GO\n")
+	HelloWorld()
+	ForLoop(10)
+	ConditionalStatement(25)
+	SwitchStatement(5)
+}
 
+//HelloWorld prints a greeting
+func HelloWorld() {
+	fmt.Printf("hello, world this is GO\n")
+}
+
+//ForLoop prints numbers
+func ForLoop(totalTimes int) {
 	fmt.Println("for loop practice")
-	for i := 0; i < 10; i++ {
+	for i := 0; i < totalTimes; i++ {
 		fmt.Println(i)
 	}
+}
 
+//ConditionalStatement given an age, prints a statement about that age
+func ConditionalStatement(age int) {
 	fmt.Println("conditional statement practice")
-	age := 39
 
 	if age < 13 {
 		fmt.Println("Wow you're young!")
@@ -26,9 +39,12 @@ func main() {
 	} else {
 		fmt.Println("Over the hill!")
 	}
+}
+
+//SwitchStatement given a number representing a day, prints the associated value in english.
+func SwitchStatement(day int) {
 
 	fmt.Println("switch statement practice")
-	day := 0
 	switch day {
 	case 0:
 		fmt.Println("sunday")
