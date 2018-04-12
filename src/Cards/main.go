@@ -1,21 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	cards := newDeck()
 
-	cards.print()
-}
+	hand, remainingDeck := deal(cards, 5)
 
-func newCard() string {
-	return "Five of Diamonds"
-}
+	fmt.Println("hand")
+	hand.print()
 
-//PrintArray prints each element of a string array
-func PrintArray(arr []string) {
-	//simple syntax
-	for i := 0; i < len(arr); i++ {
-		fmt.Println(arr[i])
-	}
+	fmt.Println()
+
+	fmt.Println("remaining Deck")
+	remainingDeck.print()
 }
