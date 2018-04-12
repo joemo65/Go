@@ -25,5 +25,18 @@ func main() {
 		},
 	}
 
-	fmt.Println(jim)
+	jim.print()
+
+	jimPointer := &jim
+	jimPointer.updateName("Michael", "Scott")
+	jim.print()
+}
+
+func (pointerToPerson *person) updateName(newFirstName string, newLastName string) {
+	(*pointerToPerson).firstName = newFirstName
+	(*pointerToPerson).lastName = newLastName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
 }
