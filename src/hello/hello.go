@@ -8,6 +8,7 @@ func main() {
 	ConditionalStatement(25)
 	SwitchStatement(5)
 	MaxPractice()
+	ArrayPractice()
 }
 
 //HelloWorld prints a greeting
@@ -80,4 +81,21 @@ func Max(i int, j int) int {
 	}
 
 	return i
+}
+
+//ArrayPractice practice showing the use of an array of integers
+func ArrayPractice() {
+	fmt.Println("array practice")
+	//var a []int
+	b := []int{0, 3, 6, 9, 12}
+	DisplayArray(b)
+	bSliced := b[2:4]
+	DisplayArray(bSliced)
+}
+
+//DisplayArray displays the array of size of 5
+func DisplayArray(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		fmt.Println(arr[i])
+	}
 }
