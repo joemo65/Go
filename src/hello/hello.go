@@ -7,6 +7,7 @@ func main() {
 	ForLoop(10)
 	ConditionalStatement(25)
 	SwitchStatement(5)
+	MaxPractice()
 }
 
 //HelloWorld prints a greeting
@@ -63,4 +64,20 @@ func SwitchStatement(day int) {
 	default:
 		fmt.Println("it's groundhog day")
 	}
+}
+
+//MaxPractice calls the max function to get the max value of two integers and displays it
+func MaxPractice() {
+	fmt.Println("max practice")
+	maxValue := Max(2, 7)
+	fmt.Println(maxValue)
+}
+
+//Max determines the bigger value of the two and returns it
+func Max(i int, j int) int {
+	if i < j {
+		return j
+	}
+
+	return i
 }
