@@ -5,7 +5,11 @@ import (
 )
 
 func main() {
-	cards := newDeckFromFile("my_cards")
-	fmt.Println(cards.toString())
-	cards.saveToFile("my_cards")
+	cards := newDeck()
+	cards.print()
+
+	fmt.Println()
+
+	cards.shuffle()
+	cards.print()
 }
